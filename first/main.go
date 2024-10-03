@@ -40,9 +40,10 @@ func (r *Rectangle) Area() float64 {
 
 func main() {
 	// Объявляем интерфейсы, так как интерфейсом является объект, который
-	// содержит все его методы
-	var shapeFirst = Circle{Radius: 1}
-	var shapeSecond = Rectangle{Width: 5, Height: 5}
+	// содержит все его методы (и обязательно передаем туда именно указатель
+	// так как мы в методе указали звездочку (ссылку на структуру))
+	var shapeFirst Shape = &Circle{Radius: 1}
+	var shapeSecond Shape = &Rectangle{Width: 5, Height: 5}
 	// Получаем знаечения
 	fmt.Println(shapeFirst.Area())
 	fmt.Println(shapeSecond.Area())
