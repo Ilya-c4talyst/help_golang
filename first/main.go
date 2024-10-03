@@ -16,7 +16,7 @@ type Circle struct {
 }
 
 // Создадим структуру для прямоугольника с полями высота/ширина типа float64
-type Retangle struct {
+type Rectangle struct {
 	Width  float64
 	Height float64
 }
@@ -27,7 +27,7 @@ func (c *Circle) Area() float64 {
 }
 
 // Сделаем метод для структуры прямоугольника и посчитаем площадь
-func (r *Retangle) Area() float64 {
+func (r *Rectangle) Area() float64 {
 	return r.Height * r.Width
 }
 
@@ -42,7 +42,7 @@ func main() {
 	// Объявляем интерфейсы, так как интерфейсом является объект, который
 	// содержит все его методы
 	var shapeFirst = Circle{Radius: 1}
-	var shapeSecond = Retangle{Width: 5, Height: 5}
+	var shapeSecond = Rectangle{Width: 5, Height: 5}
 	// Получаем знаечения
 	fmt.Println(shapeFirst.Area())
 	fmt.Println(shapeSecond.Area())
